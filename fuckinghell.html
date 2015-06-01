@@ -18,19 +18,29 @@ PImage space;
 PImage planet[] = new PImage[19];
 PImage earth[] = new PImage[13];
 PImage gplanet[] = new PImage[19];
+PImage dplanet[] = new PImage[19];
 
 int n;
 int m;
 int l;
+int j;
+int s;
+
 int spinX;
 int spinY;
 int spinX2;
 int spinY2;
 int spinX3;
 int spinY3;
+int spinX4;
+int spinY4;
+int spinX5;
+int spinY5;
 
 int x1;
 int y1;
+int x2;
+int y2;
 int yoloball;
 
 int stage1;
@@ -41,6 +51,8 @@ int keep1;
 int keep2;
 int keep3;
 int keep4;
+int keep5;
+int keep6;
 
 int maxsize;
 
@@ -101,6 +113,22 @@ void setup()
 		}
 	time3 = 0;
 	
+	j = 1;
+	while(j <= 19)
+		{
+			gplanet[j] = loadImage("gplanet/gplanet"+j+".png")
+			j = j + 1;
+		}
+	time4 = 0;
+	
+	s = 1;
+	while(s <= 19)
+		{
+			planet[s] = loadImage("planet/planet"+s+".png");
+			s = s + 1;
+		}
+	time5 = 0;
+	
 	
 	spinX = random(100,1100);
 	spinY = random(10,200);
@@ -108,7 +136,11 @@ void setup()
     spin2Y = random(250,400);
     spin3X = random(30,1000);
     spin3Y = random(450,600);
-
+    spin4X = random(100,600);
+    spin4Y = random(100,600);
+    spin5X = random(300,400);
+    spin5Y = random(30,500);
+    
 	prime = loadFont("PRIMETIME");
 	leung = loadImage("leung.png");
 	space = loadImage("space.jpg");
@@ -121,6 +153,8 @@ void setup()
 	keep2 = 1;
 	keep3 = 1;
 	keep4 = 1;
+	keep5 = 1;
+	keep6 = 1;
 	
 	left = false;
 	right = false;
@@ -401,7 +435,179 @@ void draw()
 				time3 = 0;
 			}
     	}
-
+	if (keep5 == 1)
+    	{
+			 if(time4 >= 0 && time4 <= 10)
+			{
+				image(gplanet[1],spin4X,spin4Y);
+			}
+			if(time4 >= 10 && time4 <= 20)
+			{
+				image(gplanet[2],spin4X,spin4Y);
+			}
+			if(time4 >= 20 && time4 <= 30)
+			{
+				image(gplanet[3],spin4X,spin4Y);
+			}
+			if(time4 >= 30 && time4 <= 40)
+			{
+				image(gplanet[4],spin4X,spin4Y);
+			}
+			if(time4 >= 40 && time4 <= 50)
+			{
+				image(gplanet[5],spin4X,spin4Y);
+			}
+			if(time4 >= 50 && time4 <= 60)
+			{
+				image(gplanet[6],spin4X,spin4Y);
+			}
+			if(time4 >= 60 && time4 <= 70)
+			{
+				image(gplanet[7],spin4X,spin4Y);
+			}
+			if(time4 >= 70 && time4 <= 80)
+			{
+				image(gplanet[8],spin4X,spin4Y);
+			}
+			if(time4 >= 80 && time4 <= 90)
+			{
+				image(gplanet[9],spin4X,spin4Y);
+			}
+			if(time4 >= 90 && time4 <= 100)
+			{
+				image(gplanet[10],spin4X,spin4Y);
+			}
+			if(time4 >= 100 && time4 <= 110)
+			{
+				image(gplanet[11],spin4X,spin4Y);
+			}
+			if(time4 >= 110 && time4 <= 120)
+			{
+				image(gplanet[12],spin4X,spin4Y);
+			}
+			if(time4 >= 120 && time4 <= 130)
+			{
+				image(gplanet[13],spin4X,spin4Y);
+			}
+			if(time4 >= 130 && time4 <= 140)
+			{
+				image(gplanet[14],spin4X,spin4Y);
+			}
+			if(time4 >= 140 && time4 <= 150)
+			{
+				image(gplanet[15],spin4X,spin4Y);
+			}
+			if(time4 >= 150 && time4 <= 160)
+			{
+				image(gplanet[16],spin4X,spin4Y);
+			}
+			if(time4 >= 160 && time4 <= 170)
+			{
+				image(gplanet[17],spin4X,spin4Y);
+			}
+			if(time4 >= 170 && time4 <= 180)
+			{
+				image(gplanet[18],spin4X,spin4Y);
+			}
+			if(time4 >= 180 && time4 <= 190)
+			{
+				image(gplanet[19],spin4X,spin4Y);
+			}
+			text(time4,350,100);
+			time4 = time4 + 2;
+	
+			if(time4 == 190)
+			{
+				time4 = 0;
+			}
+    	}
+    	
+    if (keep6 == 1)
+    	{
+			if(time5 >= 0 && time5 <= 10)
+			{
+				image(planet[1],spin5X,spin5Y);
+			}
+			if(time5 >= 10 && time5 <= 20)
+			{
+				image(planet[2],spin5X,spin5Y);
+			}
+			if(time5 >= 20 && time5 <= 30)
+			{
+				image(planet[3],spin5X,spin5Y);
+			}
+			if(time5 >= 30 && time5 <= 40)
+			{
+				image(planet[4],spin5X,spin5Y);
+			}
+			if(time5 >= 40 && time5 <= 50)
+			{
+				image(planet[5],spin5X,spin5Y);
+			}
+			if(time5 >= 50 && time5 <= 60)
+			{
+				image(planet[6],spin5X,spin5Y);
+			}
+			if(time5 >= 60 && time5 <= 70)
+			{
+				image(planet[7],spin5X,spin5Y);
+			}
+			if(time5 >= 70 && time5 <= 80)
+			{
+				image(planet[8],spin5X,spin5Y);
+			}
+			if(time5 >= 80 && time5 <= 90)
+			{
+				image(planet[9],spin5X,spin5Y);
+			}
+			if(time5 >= 90 && time5 <= 100)
+			{
+				image(planet[10],spin5X,spin5Y);
+			}
+			if(time5 >= 100 && time5 <= 110)
+			{
+				image(planet[11],spin5X,spin5Y);
+			}
+			if(time5 >= 110 && time5 <= 120)
+			{
+				image(planet[12],spin5X,spin5Y);
+			}
+			if(time5 >= 120 && time5 <= 130)
+			{
+				image(planet[13],spin5X,spin5Y);
+			}
+			if(time5 >= 130 && time5 <= 140)
+			{
+				image(planet[14],spin5X,spin5Y);
+			}
+			if(time5 >= 140 && time5 <= 150)
+			{
+				image(planet[15],spin5X,spin5Y);
+			}
+			if(time5 >= 150 && time5 <= 160)
+			{
+				image(planet[16],spin5X,spin5Y);
+			}
+			if(time5 >= 160 && time5 <= 170)
+			{
+				image(planet[17],spin5X,spin5Y);
+			}
+			if(time5 >= 170 && time5 <= 180)
+			{
+				image(planet[18],spin5X,spin5Y);
+			}
+			if(time5 >= 180 && time5 <= 190)
+			{
+				image(planet[19],spin5X,spin5Y);
+			}
+			text(time5,250,100);
+			time5 = time5 + 2;
+	
+			if(time5 == 190)
+			{
+				time5 = 0;
+			}
+		}
     	// ball 1
 
 	if (x1 + 30 < spinX && y1 < spinY)
@@ -1053,7 +1259,438 @@ void draw()
 		}
 	}
 	
+	// ball 4
+	if (x1 + 30 < spin4X && y1 < spin4Y)
+	{
+		if (sqrt(sq((x1+30)-spin4X)+sq((y1)-spin4Y)) < 25)
+		{
+			keep5 = false;
+			{
+				if(keep5 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	
+	if (x1 > spin4X && y1 + 35 < spin4Y)
+	{
+		if (sqrt(sq((x1)-spin4X)+sq((y1+35)-spin4Y)) < 25)
+		{
+			keep5 = false;
+			{
+				if(keep5 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 + 60 > spin4X && y1 + 35 > spin4Y)
+	{
+		if (sqrt(sq((x1+60)-spin4X)+sq((y1+35)-spin4Y)) < 25)
+		{
+			keep5 = false;
+			{
+				if(keep5 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 + 30 < spin4X && y1 + 70 > spin4Y)
+	{
+		if (sqrt(sq((x1+30)-spin4X)+sq((y1+70)-spin4Y)) < 25)
+		{
+			keep5 = false;
+			
+			if(keep5 == false)
+			{ 
+				x2 = x2 + 20;
+				y2 = y2 + 20;
+				
+				if (x2 > 110 && y2 > 120)
+				{
+					stage1=true;
+					
+					if (stage1 == true)
+					{
+						stage2 = true;
+					}
+					
+				}
+				
+			}
+			
+		}
+	}
+	if (x1 + 30 < spin4X && y1 < spin4Y)
+	{
+		if (sqrt(sq((x1+30)-spin4X)+sq((y1)-spin4Y)) < 25)
+		{
+			keep5 = false;
+			{
+				if(keep5 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 > spin4X && y1 + 35 < spin4Y)
+	{
+		if (sqrt(sq((x1)-spin4X)+sq((y1+35)-spin4Y)) < 25)
+		{
+			keep5 = false;
+			{
+				if(keep5 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 + 60 > spin4X && y1 + 35 > spin4Y)
+	{
+		if (sqrt(sq((x1+60)-spin4X)+sq((y1+35)-spin4Y)) < 25)
+		{
+			keep5 = false;
+			{
+				if(keep5 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 + 30 < spin4X && y1 + 70 > spin4Y)
+	{
+		if (sqrt(sq((x1+30)-spin4X)+sq((y1+70)-spin4Y)) < 25)
+		{
+			keep5 = false;
+			{
+				if(keep5 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	//ball 5
+	
+	if (x1 + 30 < spin5X && y1 < spin5Y)
+	{
+		if (sqrt(sq((x1+30)-spin5X)+sq((y1)-spin5Y)) < 25)
+		{
+			keep6 = false;
+			{
+				if(keep6 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 > spin5X && y1 + 35 < spin5Y)
+	{
+		if (sqrt(sq((x1)-spin5X)+sq((y1+35)-spin5Y)) < 25)
+		{
+			keep6 = false;
+			{
+				if(keep6 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 + 60 > spin5X && y1 + 35 > spin5Y)
+	{
+		if (sqrt(sq((x1+60)-spin5X)+sq((y1+35)-spin5Y)) < 25)
+		{
+			keep6 = false;
+			{
+				if(keep6 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 + 30 < spin5X && y1 + 70 > spin5Y)
+	{
+		if (sqrt(sq((x1+30)-spin5X)+sq((y1+70)-spin5Y)) < 25)
+		{
+			keep6 = false;
+			{
+				if(keep6 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 + 30 < spin5X && y1 < spin5Y)
+	{
+		if (sqrt(sq((x1+30)-spin5X)+sq((y1)-spin5Y)) < 25)
+		{
+			keep6 = false;
+			{
+				if(keep6 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 > spin5X && y1 + 35 < spin5Y)
+	{
+		if (sqrt(sq((x1)-spin5X)+sq((y1+35)-spin5Y)) < 25)
+		{
+			keep6 = false;
+			{
+				if(keep6 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 + 60 > spin5X && y1 + 35 > spin5Y)
+	{
+		if (sqrt(sq((x1+60)-spin5X)+sq((y1+35)-spin5Y)) < 25)
+		{
+			keep6 = false;
+			{
+				if(keep6 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (x1 + 30 < spin5X && y1 + 70 > spin5Y)
+	{
+		if (sqrt(sq((x1+30)-spin5X)+sq((y1+70)-spin5Y)) < 25)
+		{
+			keep6 = false;
+			{
+				if(keep6 == false)
+				{ 
+					x2 = x2 + 20;
+					y2 = y2 + 20;
+					{
+					if (x2 > 110 && y2 > 120)
+						{
+							stage1=true;
+							{
+							if (stage1 == true)
+								{
+							  		stage2 = true;
+							  	}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	
     if (left == true)
     	{
@@ -1247,6 +1884,8 @@ if (redBall2Y < 0)
 					keep2 = 1;
 					keep3 = 1;
 					keep4 = 1;
+					keep5 = 1;
+					keep6 = 1;
 					redBall2X = 0;
 					redBall2Y = 0;
 					redRandom2X = random(20,30);
@@ -1281,7 +1920,7 @@ if (redBall2Y < 0)
 			} 
     	}
     	
-    	if (keep2 == 0 && keep3 == 0 && keep4 == 0)
+    	if (keep2 == 0 && keep3 == 0 && keep4 == 0 && keep5 == 0 && keep6 == 0)
     	{
     	textFont(prime,197);
     	fill(0,0,255);
@@ -1318,6 +1957,8 @@ if (redBall2Y < 0)
 					keep2 = 1;
 					keep3 = 1;
 					keep4 = 1;
+					keep5 = 1;
+					keep6 = 1;
 					redBall2X = 0;
 					redBall2Y = 0;
 					redRandom2X = random(20,30);
@@ -1336,6 +1977,10 @@ if (redBall2Y < 0)
 					spinY2 = random(250,400);
 					spinX3 = random(30,1000);
 					spinY3 = random(450,600);
+					spinX4 = random(100,600);
+					spinY4 = random(100,600);
+					spin5X = random(300,400);
+    				spin5Y = random(30,500);
 				}
 			} 
     	
@@ -1367,6 +2012,8 @@ void keyPressed()
 			keep2 = 1;
 			keep3 = 1;
 			keep4 = 1;
+			keep5 = 1;
+			keep6 = 1;
 			redBall2X = 0;
 			redBall2Y = 0;
 			redRandom2X = random(20,30);
@@ -1385,6 +2032,10 @@ void keyPressed()
 			spinY2 = random(250,400);
 			spinX3 = random(30,1000);
 			spinY3 = random(450,600);
+			spinX4 = random(100,600);
+			spinY4 = random(100,600);
+			spin5X = random(300,400);
+  		    spin5Y = random(30,500);
 		}
 }
 void keyReleased()

@@ -23,7 +23,7 @@ soundManager.setup({
       }
     });
 
-    var soundURLs = 'BalloonPopFast'.split(',');
+    var soundURLs = 'bgm,scream,'.split(',');
     for (var i=0; i<soundURLs.length; i++) {
       soundManager.createSound({
         id: 's'+i,
